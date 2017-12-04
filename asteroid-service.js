@@ -4,7 +4,8 @@
     var arrayLength;
     var asteroidArray = [];
     return {
-      makeRequest: makeRequest
+      makeRequest: makeRequest,
+      getData: getData
     };
     function makeRequest() {
       return $http({
@@ -25,10 +26,13 @@
         asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.kilometers);
         asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body);
       }
-      console.log(asteroidArray);
         //display random asteroid data ^^^
 
       });
+    }
+
+    function getData() {
+      return asteroidArray;
     }
 
   }

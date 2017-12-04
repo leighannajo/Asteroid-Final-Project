@@ -15,16 +15,15 @@
         asteroidData = response;
         var arrayLength = asteroidData.data.near_earth_objects.length;
         var randomNumber = Math.floor(Math.random() * arrayLength);
-        // console.log(asteroidData.data.near_earth_objects[0].close_approach_data[0]);
 
       for(var i=0; i< asteroidData.data.near_earth_objects[randomNumber].close_approach_data.length; i++) {
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].close_approach_date);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.kilometers_per_hour);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.miles_per_hour);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.astronomical);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.miles);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.kilometers);
-        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body);
+        asteroidArray.push("Close Approach Date" + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].close_approach_date);
+        asteroidArray.push("Relative Velocity: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.kilometers_per_hour + "kph");
+        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.miles_per_hour + "mph");
+        asteroidArray.push("Miss Distance: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.astronomical + "AU");
+        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.miles + " miles");
+        asteroidArray.push(asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.kilometers + " kilometers");
+        asteroidArray.push("Orbiting Body: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body);
       }
         //display random asteroid data ^^^
 

@@ -8,9 +8,10 @@
     vm.today = (vm.mm + '/' + vm.dd + "/" + vm.yyyy);
 
     vm.asteroidData;
-    vm.getData = function() {
+    vm.getRequest = function() {
       AsteroidService.makeRequest();
     };
+
 
 
   }

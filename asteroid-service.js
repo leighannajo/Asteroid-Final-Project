@@ -37,7 +37,7 @@
           asteroidArray.push("Orbiting Body: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body);
         }
 
-        console.log(asteroidData.data.near_earth_objects[randomNumber]);
+        // console.log(asteroidData.data.near_earth_objects[randomNumber]);
         //display random asteroid data ^^^
 
       });

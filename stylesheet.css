@@ -1,0 +1,21 @@
+.twitter {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 500px;
+    overflow: scroll;
+}
+
+@media only screen and (min-width: 600px) {
+    .twitter {
+        display: block;
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .twitter {
+        display: block;
+        width: 25%;
+    }
+}

@@ -4,19 +4,19 @@
        var arrayLength;
         return {
             searchName: searchName
+
         };
     
-    function searchName() {
+    function searchName(text) {
         return $http ({
             method: "GET",
-            url: "https://api.nasa.gov/neo/rest/v1/neo/browse?size=40&api_key=WJqgdCXy65yXJVQE6Se8wR4TmyDe6SqNONYiN4ef"
+            url: "https://ssd-api.jpl.nasa.gov/cad.api?date-min=" + text + "T00:00:01&date-max="+ text + "T23:59:59&dist-max=1"
         }).then(function(response){
             asteroidData = response;
-            arrayLength = asteroidData.data.near_earth_objects.length;
-            for(var i = 0;i < arrayLength;i++) {
-                console.log(asteroidData.data.near_earth_objects[i].name);
+            console.log(asteroidData);
+            
                 
-            }
+            
         })
     }
     }

@@ -7,16 +7,16 @@ var searchComponent = {
         <option value="">Name</option>
     </select>
     <input ng-model="$ctrl.searchInput"type="text" name="" id="">
-    <button ng-click="$ctrl.getSearchData();">Search</button>
+    <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     `,
     controller:
 
     function(SearchService) {
         var vm = this;
         vm.searchInput;
-        vm.getSearchData = function() {
+        vm.getSearchData = function(text) {
             console.log(vm.searchInput);
-            SearchService.searchName();
+            SearchService.searchName(text);
         }
 
     }

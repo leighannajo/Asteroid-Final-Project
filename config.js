@@ -8,6 +8,10 @@ angular
                    <meter-component></meter-component>
                    <search-component></search-component>
                    `
+      }).when("/incoming", {
+        template: `
+                  <incom-component></incom-compnent>
+                  `
       })
   })
 

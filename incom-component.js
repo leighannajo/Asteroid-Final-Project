@@ -1,13 +1,19 @@
 (function(){
     var incomComponent = {
         template:`
-        <h1> {{}} </h1>
-        <p> {{}} </p>
+        <ul>
+        <li ng-repeat="objects in $ctrl.incomData">{{objects}}</li>
+    </ul>
         `,
         controller:
-
-        function() {
-
+        
+        function(IncomService) {
+            var vm = this;
+            vm.incomData;
+        IncomService.startIncom().then(function(){
+            vm.incomData = IncomService.getData();
+            
+        })
         }
 
 

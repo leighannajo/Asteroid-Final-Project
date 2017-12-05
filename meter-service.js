@@ -12,7 +12,7 @@
         url: "https://ssd-api.jpl.nasa.gov/cad.api"
       }).then(function(response) {
         asteroidData = response.data.data[0];
-        // asteroidData = Number(asteroidData).toFixed(5);
+        asteroidData = Number(asteroidData).toFixed(5);
         return asteroidData;
 
       });

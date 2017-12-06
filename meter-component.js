@@ -27,6 +27,6 @@
     }
   }
   angular
-    .module("app")
-    .component("meterComponent", meterComponent);
+  .module("app")
+  .component("meterComponent", meterComponent);
 }());

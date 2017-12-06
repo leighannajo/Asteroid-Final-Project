@@ -1,7 +1,7 @@
 (function(){
   function searchDirective() {
     return {
-          restrict: "A",
+      restrict: "A",
       link: function($scope, $element, $attrs) {
         $element.on("click", function() {
           $scope.$apply(function() {
@@ -12,6 +12,6 @@
     };
   }
   angular
-    .module("app")
-    .directive("searchDirective", searchDirective);
+  .module("app")
+  .directive("searchDirective", searchDirective);
 })();

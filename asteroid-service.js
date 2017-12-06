@@ -14,6 +14,7 @@
         url: "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=WJqgdCXy65yXJVQE6Se8wR4TmyDe6SqNONYiN4ef"
       }).then(function(response) {
         asteroidData = response;
+        console.log(asteroidData);
         var arrayLength = asteroidData.data.near_earth_objects.length;
         var randomNumber = Math.floor(Math.random() * arrayLength);
         asteroidArray.push("Name: " + asteroidData.data.near_earth_objects[randomNumber].name);

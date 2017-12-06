@@ -5,11 +5,57 @@
     height: 500px;
     overflow: scroll;
 }
+#search{
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow:column;
+  background-image: url("images/starry.jpg");
+  z-index: -1;
+
+}
+
+input, button, select{
+  border: none;
+  margin: 10px;
+  border-radius: 15px;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(255,255,255,1);
+  box-shadow: 0px 0px 11px 1px rgba(255,255,255,1);
+
+}
+
+#container {
+width: 100%;
+margin: auto;
+display: flex;
+flex-flow: row wrap;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.asteroid{
+  color: white;
+  border: 2px white solid;
+  margin: 10px;
+  width: 25%;
+
+}
 
 @media only screen and (min-width: 600px) {
     .twitter {
         display: block;
         width: 20%;
+        height: 100%;
     }
 }
 

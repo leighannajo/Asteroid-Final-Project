@@ -2,7 +2,7 @@
   var incomComponent = {
     template:`
 
-    <div class="search">
+    <div class="search incom">
     <h3>Incoming Asteroids!</h3>
     <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray">{{objects}}</div>
     </div>

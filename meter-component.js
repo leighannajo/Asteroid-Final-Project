@@ -14,15 +14,17 @@
       vm.approachTime;
       vm.objectName;
 
+      
+
       MeterService.makeRequest().then(function(response) {
-        vm.distanceData = Number(response[5]).toFixed(5);
-        console.log(vm.distanceData);
-        vm.speedData = Number(response[7]).toFixed(5);
-        console.log(vm.speedData + "km/s");
-        vm.approachTime = response[3];
-        console.log(vm.approachTime);
-        vm.objectName = response[0];
-        console.log(vm.objectName);
+        // vm.distanceData = Number(response[5]).toFixed(5);
+        // console.log(vm.distanceData);
+        // vm.speedData = Number(response[7]).toFixed(5);
+        // console.log(vm.speedData + "km/s");
+        // vm.approachTime = response[3];
+        // console.log(vm.approachTime);
+        // vm.objectName = response[0];
+        // console.log(vm.objectName);
       });
     }
   }

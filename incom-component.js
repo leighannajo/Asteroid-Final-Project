@@ -4,7 +4,7 @@
 
     <div class="search incom">
     <h3>Incoming Asteroids!</h3>
-    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray">{{objects}}</div>
+    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div>
     </div>
     `,
     controller:
@@ -20,11 +20,11 @@
         vm.incomData.forEach(function(item) {
           console.log(item);
           vm.asteroidObj = {
-            Name : item[0],
-            "Close Approach Date": item[3],
-            "Closest Distance from Earth": item[4] + "AU",
-            "Speed ": item[5] + "km/s",
-            "Orbits Around: ": item[10]
+            name : item[0],
+            date: item[3],
+            distance: Number(item[4]).toFixed(3) + "AU",
+            speed: Number(item[5]).toFixed(3) + "km/s",
+            orbits: item[10]
           }
           vm.displayArray.push(vm.asteroidObj);
         })

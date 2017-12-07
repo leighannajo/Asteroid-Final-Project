@@ -3,7 +3,18 @@
   var meterComponent = {
     template: `
     <h1>The End is Near</h1>
-    <p>{{$ctrl.objectName}}|{{$ctrl.distanceData}}|{{$ctrl.speedData}}|{{$ctrl.approachTime}}</p>
+    <div meter-directive id="meter_container">
+    <div id="one" class="risk"></div>
+    <div id="two" class="risk"></div>
+    <div id="three" class="risk"></div>
+    <div id="four" class="risk"></div>
+    <div id="five" class="risk"></div>
+    <div id="six" class="risk"></div>
+    <div id="seven" class="risk"></div>
+    <div id="eight" class="risk"></div>
+    <div id="nine" class="risk"></div>
+    <div id="ten" class="risk"></div>
+    </div>
     `,
     controller:
 
@@ -13,18 +24,13 @@
       vm.speedData;
       vm.approachTime;
       vm.objectName;
+      vm.risk;
 
-      
 
-      MeterService.makeRequest().then(function(response) {
-        // vm.distanceData = Number(response[5]).toFixed(5);
-        // console.log(vm.distanceData);
-        // vm.speedData = Number(response[7]).toFixed(5);
-        // console.log(vm.speedData + "km/s");
-        // vm.approachTime = response[3];
-        // console.log(vm.approachTime);
-        // vm.objectName = response[0];
-        // console.log(vm.objectName);
+      MeterService.makeRequest().then(function(risk) {
+
+        console.log(risk);
+        vm.risk = risk;
       });
     }
   }

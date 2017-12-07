@@ -14,9 +14,10 @@
         asteroidData = response.data.data[0];
         asteroidData = Number(asteroidData).toFixed(5);
         return asteroidData;
-
       });
     }
+
+
   }
   angular
   .module("app")

@@ -25,20 +25,20 @@
         var randomNumber = Math.floor(Math.random() * arrayLength);
 
         topAsteroidObj = {
-          name: asteroidData.data.near_earth_objects[randomNumber].name,
-          potential: asteroidData.data.near_earth_objects[randomNumber].is_potentially_hazardous_asteroid,
-          diameter: (((asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_min)+(asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_max))/2),
+          name: "Name: " + asteroidData.data.near_earth_objects[randomNumber].name,
+          potential: "Potentially Hazardous? " + asteroidData.data.near_earth_objects[randomNumber].is_potentially_hazardous_asteroid,
+          diameter: "Diameter: " + (((asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_min)+(asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_max))/2),
         }
         topAsteroidArray.push(topAsteroidObj);
         for(var i=0; i< asteroidData.data.near_earth_objects[randomNumber].close_approach_data.length; i++) {
           asteroidObj = {
-            date: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].close_approach_date,
-            kph: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.kilometers_per_hour + "kph",
-            mph: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.miles_per_hour + "mph",
-            missau: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.astronomical + "AU",
-            missm: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.miles + " miles",
-            misskm: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.kilometers + " kilometers",
-            orbits: asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body
+            date: "Close approach date: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].close_approach_date,
+            kph: "Relative Velocity: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.kilometers_per_hour + "kph",
+            mph: "Relative Velocity: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].relative_velocity.miles_per_hour + "mph",
+            missau: "Miss distance: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.astronomical + "AU",
+            missm: "Miss distance: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.miles + " miles",
+            misskm: "Miss distance: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].miss_distance.kilometers + " kilometers",
+            orbits: "Orbiting Body: " + asteroidData.data.near_earth_objects[randomNumber].close_approach_data[i].orbiting_body
           }
           asteroidArray.push(asteroidObj);
         }

@@ -20,11 +20,11 @@
         vm.incomData.forEach(function(item) {
           console.log(item);
           vm.asteroidObj = {
-            name : item[0],
-            date: item[3],
-            distance: Number(item[4]).toFixed(3) + "AU",
-            speed: Number(item[5]).toFixed(3) + "km/s",
-            orbits: item[10]
+            name : "Name: " + item[0],
+            date: "Date of Impact: " + item[3],
+            distance: "Distance: " + Number(item[4]).toFixed(12) + " AU",
+            speed: "Speed: " + Number(item[5]).toFixed(5) + " km/s",
+            orbits: "Orbiting: " + item[10]
           }
           vm.displayArray.push(vm.asteroidObj);
         })

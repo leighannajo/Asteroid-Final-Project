@@ -12,6 +12,7 @@
     };
     function makeRequest() {
       asteroidArray = [];
+      topAsteroidArray = [];
       return $http({
         method: "GET",
         url: "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=WJqgdCXy65yXJVQE6Se8wR4TmyDe6SqNONYiN4ef"

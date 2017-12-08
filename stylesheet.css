@@ -15,6 +15,9 @@
   box-shadow: 0px 0px 11px 1px rgba(0,0,0,1);
 }
 
+.asteroidLink {
+  color: white;
+}
 nav {
   min-width: 320px;
   height: 40px;

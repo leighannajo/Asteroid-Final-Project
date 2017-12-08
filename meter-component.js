@@ -3,7 +3,6 @@
   var meterComponent = {
     template: `
     <div id="meter_container2">
-    <h1>The End is Near</h1>
     <h2>{{$ctrl.meterName}}<br>{{$ctrl.meterDate}}</h2>
     <div meter-directive id="meter_container">
     <div ng-if="$ctrl.display1" id="one" class="risk"></div>

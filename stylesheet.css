@@ -30,7 +30,10 @@ nav {
   z-index: 1;
 
 }
-
+/*nav h1 {
+  float: left;
+  color: white;
+}*/
 nav a {
   text-decoration: none;
   font-family: 'PT Sans', sans-serif;

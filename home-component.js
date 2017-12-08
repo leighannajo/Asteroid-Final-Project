@@ -1,7 +1,7 @@
 (function(){
   var homeComponent = {
     template: `
-    <button>this does nothing</button>
+    <!-- <button>this does nothing</button> -->
     <div class="oftheday">
     <h1>Asteroid of the Day</h1>
     <p ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}<br>{{data.potential}}<br>{{data.diameter}}</p>

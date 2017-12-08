@@ -96,3 +96,130 @@ input, button, select{
   background-image: url("images/incoming.jpeg");
   background-size: cover;
 }
+
+@media only screen and (min-width: 600px) {
+
+.oftheday {
+  width: 73%;
+  margin: 0 0 0 5px;
+}
+
+  .twitter {
+    display: block;
+    width: 25%;
+    height: 100%;
+  }
+  .asteroid{
+    width: 50%;
+  }
+  .search{
+    width: 75%;
+    height: 100%;
+
+    z-index: -1;
+  }
+  input, button, select{
+    margin: 10px;
+    border-radius: 15px;
+    height: 30px;
+    width: 50%;
+  }
+  nav {
+    background-size: cover;
+    background-image: url(images/navtablet.jpg);
+    height: 45px;
+    min-width: 600px;
+  }
+}
+h3 {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+
+@media only screen and (min-width: 769px) {
+
+  .oftheday {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .twitter {
+    display: block;
+    width: 25%;
+    top: 55px;
+  }
+  .search{
+    width: 75%;
+    height: 100%;
+
+    z-index: -1;
+  }
+
+  input, button, select{
+    margin: 10px;
+    border-radius: 15px;
+    height: 30px;
+    width: 200px;
+  }
+
+  nav {
+    background-size: cover;
+    background-image: url(images/navdesktop.jpg);
+    height: 45px;
+    min-width: 100%;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+  }
+
+  nav a  {
+    margin-right: 70px;
+    font-size: 20px;
+  }
+
+  .asteroid{
+    width: 25%;
+
+  }
+  select {
+    padding: 0;
+  }
+  #meter_container {
+    width: 25%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+  }
+  .risk {
+    height: 90%;
+    width: 8%;
+    margin-right: 1%;
+    margin-left: 1%;
+    opacity: 0;
+  }
+
+  #one, #two, #three {
+    background-color: green;
+    opacity: 1;
+  }
+    #four, #five, #six {
+    background-color: yellow;
+    opacity: 1;
+  }
+      #seven, #eight, #nine {
+    background-color: orange;
+    opacity: 1;
+  }
+  #ten {
+    background-color: red;
+    opacity: 1;
+  }
+}

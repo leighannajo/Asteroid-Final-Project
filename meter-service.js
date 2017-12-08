@@ -25,7 +25,7 @@
       }).then(function(response) {
         asteroidData = response;
         currentAsteroid = asteroidData.data.near_earth_objects[today][0];
-
+        risk = 0;
         if (currentAsteroid.close_approach_data[0].miss_distance.kilometers < 7479893) {
           risk = risk + 1;
         }

@@ -193,12 +193,12 @@ h3 {
     width: 75%;
     opacity: 0.9;
     margin: 10px 0 0 0;
-    min-height: 770px;
+    min-height: 1vh;
   }
 
   .twitter {
     display: block;
-    height: 630px;
+    min-height: 500px;
     width: 25%;
     top: 200px;
   }

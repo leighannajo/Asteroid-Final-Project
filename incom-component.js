@@ -5,6 +5,7 @@
     <div class="search incom">
     <h3>Incoming Asteroids!</h3>
     <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div>
+    <meter-component></meter-component>
     </div>
     `,
     controller:

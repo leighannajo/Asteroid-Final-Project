@@ -10,10 +10,12 @@ angular
       }).when("/incoming", {
         template: `
                   <incom-component></incom-compnent>
+                  <meter-component></meter-component>
                   `
       }).when("/search", {
         template:`
                   <search-component></search-component>
+                  <meter-component></meter-component>
         `
       })
   })

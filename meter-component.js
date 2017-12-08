@@ -4,6 +4,7 @@
     template: `
     <div id="meter_container2">
     <h1>The End is Near</h1>
+    <h2>{{$ctrl.meterName}}<br>{{$ctrl.meterDate}}</h2>
     <div meter-directive id="meter_container">
     <div ng-if="$ctrl.display1" id="one" class="risk"></div>
     <div ng-if="$ctrl.display2" id="two" class="risk"></div>
@@ -108,8 +109,14 @@
           vm.display9 = true;
           vm.display10 = true;
         }
+        console.log(MeterService.getMeterData());
+    vm.meterDate = MeterService.getMeterData().close_approach_data["0"].close_approach_date;
+    vm.meterName = MeterService.getMeterData().name;
 
       });
+
+
+
     }
   }
   angular

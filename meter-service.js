@@ -1,6 +1,7 @@
 (function(){
   function MeterService($http) {
     var asteroidData;
+    var currentAsteroid;
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1;
@@ -16,7 +17,9 @@
     console.log(today);
 
     return {
-      makeRequest: makeRequest
+      makeRequest: makeRequest,
+      getMeterData: getMeterData
+
     };
     function makeRequest() {
       return $http({
@@ -52,7 +55,10 @@
       });
 
     }
-
+    function getMeterData() {
+    //  console.log(currentAsteroid);
+      return currentAsteroid;
+    }
 
   }
   angular

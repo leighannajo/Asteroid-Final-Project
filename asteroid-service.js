@@ -28,6 +28,8 @@
           name: "Name: " + asteroidData.data.near_earth_objects[randomNumber].name,
           potential: "Potentially Hazardous? " + asteroidData.data.near_earth_objects[randomNumber].is_potentially_hazardous_asteroid,
           diameter: "Diameter: " + (((asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_min)+(asteroidData.data.near_earth_objects[randomNumber].estimated_diameter.kilometers.estimated_diameter_max))/2),
+          url:  asteroidData.data.near_earth_objects[randomNumber].nasa_jpl_url,
+
         }
         topAsteroidArray.push(topAsteroidObj);
         for(var i=0; i< asteroidData.data.near_earth_objects[randomNumber].close_approach_data.length; i++) {

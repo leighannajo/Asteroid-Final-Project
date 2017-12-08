@@ -2,10 +2,9 @@
   var incomComponent = {
     template:`
 
-    <div class="search incom">
+    <div class="incom">
     <h3>Incoming Asteroids!</h3>
-    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div>
-    <meter-component></meter-component>
+    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distanceau}}<br>{{objects.distancemi}}<br>{{objects.distancekm}}<br>{{objects.speed}}<br>{{objects.orbits}}</div>
     </div>
     `,
     controller:
@@ -23,7 +22,9 @@
           vm.asteroidObj = {
             name : "Name: " + item[0],
             date: "Date of Impact: " + item[3],
-            distance: "Distance: " + Number(item[4]).toFixed(12) + " AU",
+            distanceau: "Distance: " + Number(item[4]).toFixed(12) + " AU",
+            distancemi: (Number(item[4])*92000000).toFixed(0) + " miles",
+            distancekm: ((Number(item[4])*92000000)*1.60934).toFixed(0) + " km",
             speed: "Speed: " + Number(item[5]).toFixed(5) + " km/s",
             orbits: "Orbiting: " + item[10]
           }

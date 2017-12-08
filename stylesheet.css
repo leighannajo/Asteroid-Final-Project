@@ -113,6 +113,16 @@ button {
     margin: 0;
     width: 75%;
   }
+  .search {
+    height: 100vh;
+    margin: 0;
+    width: 75%;
+  }
+  .incom {
+    height: 100vh;
+    margin: 0;
+    width: 75%;
+  }
   #meter_container2 {
     position: absolute;
     top: 60px;

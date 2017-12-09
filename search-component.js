@@ -2,8 +2,10 @@
   var searchComponent = {
     template:`<div class="search">
     <h3>Search Asteroids by Date!</h3>
+    <form>
     <input ng-model="$ctrl.searchInput"type="text" placeholder="yyyy-mm-dd" id="">
     <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
+    </form>
     <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
     </div>
     `,

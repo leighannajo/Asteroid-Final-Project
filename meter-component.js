@@ -3,18 +3,39 @@
   var meterComponent = {
     template: `
     <div id="meter_container2">
+    <h1>ARMAGEDDON METER</h1>
     <h2>{{$ctrl.meterName}}<br>{{$ctrl.meterDate}}</h2>
-    <div meter-directive id="meter_container">
+    <div id="meter_container">
     <div ng-if="$ctrl.display1" id="one" class="risk"></div>
+    <div ng-if="$ctrl.display1" id="one1" class="risk"></div>
+    <div ng-if="$ctrl.display1" id="one2" class="risk"></div>
     <div ng-if="$ctrl.display2" id="two" class="risk"></div>
+    <div ng-if="$ctrl.display2" id="two1" class="risk"></div>
+    <div ng-if="$ctrl.display2" id="two2" class="risk"></div>
     <div ng-if="$ctrl.display3" id="three" class="risk"></div>
+    <div ng-if="$ctrl.display3" id="three1" class="risk"></div>
+    <div ng-if="$ctrl.display3" id="three2" class="risk"></div>
     <div ng-if="$ctrl.display4" id="four" class="risk"></div>
+    <div ng-if="$ctrl.display4" id="four1" class="risk"></div>
+    <div ng-if="$ctrl.display4" id="four2" class="risk"></div>
     <div ng-if="$ctrl.display5" id="five" class="risk"></div>
+    <div ng-if="$ctrl.display5" id="five1" class="risk"></div>
+    <div ng-if="$ctrl.display5" id="five2" class="risk"></div>
     <div ng-if="$ctrl.display6" id="six" class="risk"></div>
+    <div ng-if="$ctrl.display6" id="six1" class="risk"></div>
+    <div ng-if="$ctrl.display6" id="six2" class="risk"></div>
     <div ng-if="$ctrl.display7" id="seven" class="risk"></div>
+    <div ng-if="$ctrl.display7" id="seven1" class="risk"></div>
+    <div ng-if="$ctrl.display7" id="seven2" class="risk"></div>
     <div ng-if="$ctrl.display8" id="eight" class="risk"></div>
+    <div ng-if="$ctrl.display8" id="eight1" class="risk"></div>
+    <div ng-if="$ctrl.display8" id="eight2" class="risk"></div>
     <div ng-if="$ctrl.display9" id="nine" class="risk"></div>
+    <div ng-if="$ctrl.display9" id="nine1" class="risk"></div>
+    <div ng-if="$ctrl.display9" id="nine2" class="risk"></div>
     <div ng-if="$ctrl.display10" id="ten" class="risk"></div>
+    <div ng-if="$ctrl.display10" id="ten1" class="risk"></div>
+    <div ng-if="$ctrl.display10" id="ten2" class="risk"></div>
     </div>
     </div>
     `,
@@ -41,7 +62,6 @@
 
       MeterService.makeRequest().then(function(risk) {
         console.log(risk);
-
         if (risk === 1) {
           vm.display1 = true;
         } else if (risk === 2) {

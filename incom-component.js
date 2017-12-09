@@ -21,7 +21,7 @@
           console.log(item);
           vm.asteroidObj = {
             name : "Name: " + item[0],
-            date: "Date of Impact: " + item[3],
+            date: "Date of Close Approach: " + item[3],
             distanceau: "Distance: " + Number(item[4]).toFixed(12) + " AU",
             distancemi: (Number(item[4])*92000000).toFixed(0) + " miles",
             distancekm: ((Number(item[4])*92000000)*1.60934).toFixed(0) + " km",

@@ -17,6 +17,8 @@ angular
                   <search-component></search-component>
                   <meter-component></meter-component>
         `
+      }).otherwise({
+          redirectTo: "/home"
       })
   })
 

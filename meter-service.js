@@ -35,18 +35,16 @@
         if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second === 10) {
           risk = risk + 1;
         } else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 10 && currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second < 15) {
+          risk = risk + 1;
+        }  else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 20) {
           risk = risk + 2;
-        } else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 15 && currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second < 20) {
-          risk = risk + 3;
-        } else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 20) {
-          risk = risk + 4;
         }
         if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) < 25) {
           risk = 0;
         } else if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) > 25 && ((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) < 1000) {
           risk = risk + 1;
         } else if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) > 5000) {
-          risk = risk + 5;
+          risk = risk + 2;
         }
         if (currentAsteroid.is_potentially_hazardous_asteroid === true) {
           risk = 10;

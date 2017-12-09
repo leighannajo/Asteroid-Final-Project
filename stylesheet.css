@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Jura');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 
 body {
    font-family: 'Jura', sans-serif;
+}
+#meter_container2 h1 {
+  font-family: 'Cabin Sketch', cursive;
 }
 .twitter {
   display: none;
@@ -18,6 +22,17 @@ body {
   color: white;
   overflow: scroll;
 }
+.oftheday p {
+  background-color: rgba(0,0,0, 0.5);
+}
+.search div {
+  width: 100%;
+  background-color: rgba(255,255,255, 0.1);
+}
+.asteroid {
+  background-color: rgba(0,0,0, 0.5);
+  margin-bottom: 10px;
+}
 #meter_container {
   margin: 0 auto;
   width: 100%;
@@ -28,7 +43,7 @@ body {
 nav {
   width: 100%;
   height: 50px;
-  background-image: url("images/nav.jpg");
+  background-color: #85B2AA;
   background-size: cover;
   display: flex;
   justify-content: flex-end;
@@ -36,12 +51,18 @@ nav {
   align-items: center;
 }
 a {
-  color: white;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
 }
 a:hover {
   color: grey;
 }
 h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 10px;
   text-align: center;
 }
 .incom {
@@ -60,18 +81,18 @@ h1 {
   background-image: url(images/starry.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 70vh;
+  height: 70vh;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   text-align: center;
+  overflow: scroll;
 }
 .risk {
-  width: 8%;
+  width: 3.5%;
   height: 96%;
-  margin: 0 1% 0 1%;
 }
 button, input {
   width: 80%;
@@ -86,30 +107,122 @@ button, input {
 }
 button {
   border-radius: 15px;
+  background-color: white;
 }
 #meter_container {
   display: flex;
   align-items: center;
 }
-#one, #two, #three {
-  background-color: green;
+#one {
+  background-color: #32FC90;
+  margin-left: 1px;
 }
-#four, #five, #six {
-  background-color: yellow;
+#one1 {
+  background-color: #32FC79;
 }
-#seven, #eight, #nine {
-  background-color: orange;
+#one2 {
+  background-color: #32FC6B;
+}
+#two {
+  background-color: #32FC54;
+}
+#two1 {
+  background-color: #32FC46;
+}
+#two2 {
+  background-color: #4AFC32;
+}
+#three {
+  background-color: #75FC32;
+}
+#three1 {
+  background-color: #83FC32;
+}
+#three2 {
+  background-color: #9AFC32;
+}
+#four {
+  background-color: #B2FC32;
+}
+#four1 {
+  background-color: #CDFC32;
+}
+#four2 {
+  background-color: #E1FC32;
+}
+#five {
+  background-color: #EFF931;
+}
+#five1 {
+  background-color: #F9EC31;
+}
+#five2 {
+  background-color: #FCDA32;
+}
+#six {
+  background-color: #FCC332;
+}
+#six1 {
+  background-color: #F76231;
+}
+#six2 {
+  background-color: #F74F31;
+}
+#seven {
+  background-color: #F74B31;
+}
+#seven1 {
+  background-color: #F44130;
+}
+#seven2 {
+  background-color: #F74131;
+}
+#eight {
+  background-color: #F43030;
+}
+#eight1 {
+  background-color: #F73148;
+}
+#eight2 {
+  background-color: #F93153;
+}
+#nine {
+  background-color: #F93167;
+}
+#nine1 {
+  background-color: #F93174;
+}
+#nine2 {
+  background-color: #FC3286;
 }
 #ten {
-  background-color: red;
+  background-color: #FC329E;
 }
+#ten1 {
+  background-color: #FC32BF;
+}
+#ten2 {
+  background-color: #FC32CD;
+  margin-right: 1px;
+}
+
 @media only screen and (min-width: 700px){
+  #meter_container {
+    height: 30px;
+    width: 150px;
+  }
+  #meter_container2 {
+    position: absolute;
+    right: 3px;;
+    top: 70px;
+    width: 25%;
+  }
   .twitter {
     display: inline-block;
     width: 25%;
     float: right;
-    height: 84vh;
-    margin-top: 20vh;
+    height: 74vh;
+    margin-top: 150px;
     overflow: scroll;
   }
   .oftheday {
@@ -127,33 +240,44 @@ button {
     margin: 0;
     width: 75%;
   }
-  #meter_container2 {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 25%;
-    color: black;
-  }
-  #meter_container {
-    width: 160px;
-    height: 30px;
-  }
+
 h1 {
   font-size: 20px;
 }
 h3 {
   font-size: 25px;
 }
-.asteroid {
-  display: inline-block;
-  width: 70%;
-  margin-top: 15px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-  box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
-nav {
-  background-image: url(images/navtablet.jpg);
-}
+@media only screen and (min-width: 1200px){
+  #meter_container {
+    width: 320px;
+    height: 50px;
+  }
+  #meter_container2 {
+    top: 80px;
+  }
+  nav {
+    height: 70px;
+    font-size: 20px;
+    justify-content: flex-end;
+  }
+  nav a {
+    margin-right: 40px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  .asteroid {
+    font-size: 20px;
+  }
+  .oftheday p {
+    font-size: 20px;
+  }
+  .twitter {
+    margin-top: 175px;
+  }
 }

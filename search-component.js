@@ -6,7 +6,8 @@
     <input ng-model="$ctrl.searchInput"type="text" placeholder="yyyy-mm-dd" id="">
     <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     </form>
-    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
+    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">
+    {{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
     </div>
     `,
     controller:

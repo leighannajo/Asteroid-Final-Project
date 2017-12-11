@@ -18,7 +18,6 @@
         vm.incomData = IncomService.getData();
 
         vm.incomData.forEach(function(item) {
-          console.log(item);
           vm.asteroidObj = {
             name : "Name: " + item[0],
             date: "Date of Close Approach: " + item[3],

@@ -4,6 +4,11 @@
 body {
    font-family: 'Jura', sans-serif;
 }
+
+#datepicker div {
+
+}
+
 #meter_container2 h1 {
   font-family: 'Cabin Sketch', cursive;
 }
@@ -54,9 +59,11 @@ a {
   color: #000000;
   text-decoration: none;
   font-weight: bolder;
+  transition: 0.5s ease;
 }
 a:hover {
   color: grey;
+  transition: 0.5s ease;
 }
 h1 {
   text-align: center;

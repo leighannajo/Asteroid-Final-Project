@@ -128,7 +128,6 @@
           vm.display9 = true;
           vm.display10 = true;
         }
-        console.log(MeterService.getMeterData());
     vm.meterDate = MeterService.getMeterData().close_approach_data["0"].close_approach_date;
     vm.meterName = MeterService.getMeterData().name;
 

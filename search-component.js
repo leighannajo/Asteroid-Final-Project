@@ -8,7 +8,7 @@
     <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     </datepicker>
     </form>
-    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
+    <div class="container"><div incom-directive class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
     </div>
     `,
     controller:

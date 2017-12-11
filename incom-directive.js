@@ -3,7 +3,7 @@
     return {
       restrict: "A",
       link: function($scope, $element, $attrs) {
-        $element.on("click", function() {
+        $element.on("mouseenter", function() {
           $scope.$apply(function() {
             $element.css("height", "auto");
           });

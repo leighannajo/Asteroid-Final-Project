@@ -3,10 +3,53 @@
 
 body {
    font-family: 'Jura', sans-serif;
+   min-width: 300px;
 }
 
-#datepicker div {
+._720kb-datepicker-calendar-years-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  clear: both;
+}
 
+._720kb-datepicker-calendar-years-pagination a {
+  width: 40px;
+}
+
+._720kb-datepicker-calendar-header {
+  display: flex;
+  flex-direction: column;
+}
+
+._720kb-datepicker-default-button {
+  margin: 0 50px 0 50px;
+}
+
+#datepicker {
+ display: inline-block;
+ width: 400px;
+ height: 200px;
+}
+
+._720kb-datepicker-calendar{
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+._720kb-datepicker-calendar-days-header {
+  display: flex;
+}
+
+._720kb-datepicker-calendar-header {
+  display: flex;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+._720kb-datepicker-calendar-body a {
+  display: inline-block;
+  width: 14%;
 }
 
 #meter_container2 h1 {
@@ -115,6 +158,7 @@ button, input {
 button {
   border-radius: 15px;
   background-color: white;
+  margin-top: 20px;
 }
 #meter_container {
   display: flex;

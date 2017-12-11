@@ -3,10 +3,10 @@
     template:`<div class="search">
     <h3>Search Asteroids by Date!</h3>
     <form>
-    <datepicker date-format="yyyy-MM-dd" id="datepicker" ng-model="$ctrl.searchInput" md-current-view="year">
+    <datepicker id="datepicker" date-format="yyyy-MM-dd" ng-model="$ctrl.searchInput">
     <input ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">
-    </datepicker>
     <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
+    </datepicker>
     </form>
     <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
     </div>

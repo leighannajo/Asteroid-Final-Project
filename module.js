@@ -1,5 +1,5 @@
 (function(){
 
   angular
-    .module("app", ["ngRoute", "720kb.datepicker"])
+    .module("app", ["ngRoute", "720kb.datepicker", "ngAnimate"])
 })();

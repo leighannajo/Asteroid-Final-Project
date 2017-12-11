@@ -4,6 +4,7 @@
   "description": "Group Final Project",
   "main": "asteroid-service.js",
   "dependencies": {
+    "angularjs-datepicker": "^2.1.23",
     "ng-twitter": "^0.0.4"
   },
   "devDependencies": {

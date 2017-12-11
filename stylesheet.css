@@ -2,8 +2,88 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 
 body {
-   font-family: 'Jura', sans-serif;
+  font-family: 'Jura', sans-serif;
+  min-width: 300px;
 }
+p a {
+  color: white;
+  font-weight: normal;
+  border-bottom: 1px solid white;
+}
+.incom_meter {
+  width: 19%;
+  display: inline-block;
+  height: 2px;
+  opacity: 0.7;
+  margin-left: -4px;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#red {
+  background-color: red;
+}
+
+#pink {
+  background-color: #f709a0;
+}
+
+._720kb-datepicker-calendar-years-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  clear: both;
+}
+
+._720kb-datepicker-calendar-years-pagination a {
+  width: 40px;
+}
+
+._720kb-datepicker-calendar-header {
+  display: flex;
+  flex-direction: column;
+}
+
+._720kb-datepicker-default-button {
+  margin: 0 50px 0 50px;
+}
+
+#datepicker {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+}
+
+._720kb-datepicker-calendar{
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+._720kb-datepicker-calendar-days-header {
+  display: flex;
+}
+
+._720kb-datepicker-calendar-header {
+  display: flex;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+._720kb-datepicker-calendar-body a {
+  display: inline-block;
+  width: 14%;
+}
+
 #meter_container2 h1 {
   font-family: 'Cabin Sketch', cursive;
 }
@@ -30,8 +110,17 @@ body {
   background-color: rgba(255,255,255, 0.1);
 }
 .asteroid {
+  font-size: 20px;
+  overflow: hidden;
+  height: 50px;
+  margin: 0 auto;
+  transition: 0.5s ease;
   background-color: rgba(0,0,0, 0.5);
-  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.asteroid:hover {
+  background-color: rgba(50,50,50, 0.5);
+  transition: 0.5s ease;
 }
 #meter_container {
   margin: 0 auto;
@@ -54,9 +143,11 @@ a {
   color: #000000;
   text-decoration: none;
   font-weight: bolder;
+  transition: 0.5s ease;
 }
 a:hover {
   color: grey;
+  transition: 0.5s ease;
 }
 h1 {
   text-align: center;
@@ -108,6 +199,7 @@ button, input {
 button {
   border-radius: 15px;
   background-color: white;
+  margin-top: 20px;
 }
 #meter_container {
   display: flex;
@@ -241,12 +333,12 @@ button {
     width: 75%;
   }
 
-h1 {
-  font-size: 20px;
-}
-h3 {
-  font-size: 25px;
-}
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
 }
 @media only screen and (min-width: 1200px){
   #meter_container {
@@ -273,6 +365,9 @@ h3 {
   }
   .asteroid {
     font-size: 20px;
+    height: 50px;
+
+    width: 30%;
   }
   .oftheday p {
     font-size: 20px;
@@ -280,4 +375,33 @@ h3 {
   .twitter {
     margin-top: 175px;
   }
+  .shake {
+	display:inline-block
+}
+.shake {
+	display:block;
+	position:relative;
+}
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake:hover,
+.shake:focus {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
 }

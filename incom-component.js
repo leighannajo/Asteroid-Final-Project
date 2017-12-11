@@ -1,12 +1,11 @@
 (function(){
   var incomComponent = {
     template:`
-
     <div class="incom">
     <h3>Incoming Asteroids!</h3>
-    <div class="container">
-    <div incom-directive class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distanceau}}<br>{{objects.distancemi}}<br>{{objects.distancekm}}<br>{{objects.speed}}<br>{{objects.orbits}}
-    </div>
+    <div class="container"><div class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">
+    {{objects.name}}<br>{{objects.date}}<br>{{objects.distanceau}}<br>{{objects.distancemi}}<br>
+    {{objects.distancekm}}<br>{{objects.speed}}<br>{{objects.orbits}}</div>
     </div>
     `,
     controller:
@@ -16,11 +15,11 @@
       vm.incomData;
       vm.displayArray = [];
       vm.asteroidObj;
-
       IncomService.startIncom().then(function(){
         vm.incomData = IncomService.getData();
 
         vm.incomData.forEach(function(item) {
+          console.log(item);
           vm.asteroidObj = {
             name : "Name: " + item[0],
             date: "Date of Close Approach: " + item[3],

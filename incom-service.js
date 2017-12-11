@@ -14,6 +14,7 @@
         url: "https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-max=+%2b7"
       }).then(function(response){
         asteroidData = response.data.data;
+        console.log(asteroidData);
       })
     }
     function getData() {

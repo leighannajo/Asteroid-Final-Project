@@ -5,7 +5,9 @@
     <div class="incom">
     <h3>Incoming Asteroids!</h3>
     <div class="container">
-    <div incom-directive class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}<br>{{objects.distanceau}}<br>{{objects.distancemi}}<br>{{objects.distancekm}}<br>{{objects.speed}}<br>{{objects.orbits}}
+    <div incom-directive class="asteroid" ng-repeat="objects in $ctrl.displayArray track by $index">
+    {{objects.name}}<br>{{objects.date}}<br>{{objects.distanceau}}<br>{{objects.distancemi}}<br>
+    {{objects.distancekm}}<br>{{objects.speed}}<br>{{objects.orbits}}
     </div>
     </div>
     `,

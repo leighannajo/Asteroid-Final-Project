@@ -3,154 +3,69 @@
 
 body {
   font-family: 'Jura', sans-serif;
-/*   background-image: url(images/starry.jpg); */
 }
-
 #welcome {
   width: 100%;
 }
-
 p a {
   color: white;
   font-weight: normal;
   border-bottom: 1px solid white;
 }
-
-#green {
-  background-color: green;
+#datepicker {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
 }
-
-#yellow {
-  background-color: yellow;
-}
-
-#orange {
-  background-color: orange;
-}
-
-#red {
-  background-color: red;
-}
-
-#pink {
-  background-color: #f709a0;
-}
-
 ._720kb-datepicker-calendar-years-pagination {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   clear: both;
 }
-
 ._720kb-datepicker-calendar-years-pagination a {
   width: 40px;
 }
-
 ._720kb-datepicker-calendar-header {
   display: flex;
   flex-direction: column;
 }
-
 ._720kb-datepicker-default-button {
   margin: 0 50px 0 50px;
 }
-
-#datepicker {
-  display: inline-block;
-  width: 400px;
-  height: 200px;
-}
-
 ._720kb-datepicker-calendar{
   transition: 0.5s ease;
   border-radius: 10px;
+  display: none;
 }
-
 ._720kb-datepicker-calendar-days-header {
   display: flex;
 }
-
 ._720kb-datepicker-calendar-header {
   display: flex;
   padding-bottom: 20px;
   border-radius: 10px 10px 0 0;
 }
-
 ._720kb-datepicker-calendar-body a {
   display: inline-block;
   width: 14%;
 }
-
 .twitter {
   display: none;
-}
-.oftheday {
-  width: 90%;
-
-  margin: 0 auto;
-/*   background-image: url(images/oftheday.jpg); */
-/*   background-color: rgba(56, 87, 105, 1); */
-  background-size: cover;
-  background-position: center;
-  
-  color: white;
-  padding: 5px 0 10px 0;
-  margin-bottom: 20px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#33295e+0,000000+100,050202+100 */
-background: #33295e; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #33295e 0%,#000000 100%,#050202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33295e', endColorstr='#050202',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-}
-.oftheday p {
-   margin-left: 20px;
-  padding-left: 10px;
-  border-left: 5px solid white;
-}
-.search div {
-  width: 100%;
-  background-color: rgba(255,255,255, 0.1);
 }
 .asteroid {
   font-size: 20px;
   overflow: hidden;
   height: 50px;
-  margin: 0 auto;
+  margin-left: 20px;
+  border-left: solid white 5px;
+  padding-left: 10px;
   transition: 0.5s ease;
-  background-color: rgba(0,0,0, 0.5);
   margin-top: 10px;
 }
 .asteroid:hover {
   background-color: rgba(50,50,50, 0.5);
   transition: 0.5s ease;
-}
-#meter_container {
-  margin: 0 auto;
-  width: 80%;
-  height: 50px;
-  background-color: black;
-}
-
-#meter_container2 h1 {
-  font-size: 25px;
-  text-align: center;
-}
-
-#meter_container2 {
-  margin: 0 auto;
-  width: 90%;
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 25px;
-  background-size: cover;
-  padding: 20px 0 20px 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c1363+0,207cca+100,2989d8+100,7db9e8+100&0.85+1,1+100 */
-background: -moz-linear-gradient(45deg, rgba(76,19,99,0.85) 0%, rgba(76,21,100,0.85) 1%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94c1363', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 nav {
@@ -163,26 +78,26 @@ nav {
   align-items: center;
   background: linear-gradient(268deg, #246655, #4e2466);
   background-size:cover;
-
--webkit-animation: AnimationName 29s ease infinite;
--moz-animation: AnimationName 29s ease infinite;
-animation: AnimationName 29s ease infinite;
-
-@-webkit-keyframes AnimationName {
+  -webkit-animation: AnimationName 29s ease infinite;
+  -moz-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
     0%{background-position:56% 0%}
     50%{background-position:45% 100%}
     100%{background-position:56% 0%}
-}
-@-moz-keyframes AnimationName {
+  }
+  @-moz-keyframes AnimationName {
     0%{background-position:56% 0%}
     50%{background-position:45% 100%}
     100%{background-position:56% 0%}
-}
-@keyframes AnimationName { 
+  }
+  @keyframes AnimationName {
     0%{background-position:56% 0%}
     50%{background-position:45% 100%}
     100%{background-position:56% 0%}
-}
+  }
+  
 }
 a {
   color: #ffffff;
@@ -198,6 +113,25 @@ a:hover {
   margin-left: 18px;
   font-size: 25px;
 }
+.oftheday p {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 5px solid white;
+}
+.oftheday {
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5px 0 10px 0;
+  margin-bottom: 20px;
+  background: #33295e;
+  background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
+  background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
+  background: linear-gradient(135deg, #33295e 0%,#000000 100%,#050202 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33295e', endColorstr='#050202',GradientType=1 );
+}
 .title {
   color: white;
   font-size: 20px;
@@ -205,9 +139,8 @@ a:hover {
   background-image: url(images/earth.jpg);
   background-size: cover;
   display: inline-block;
-  width: 90%;
-  margin-left: 50%;
-  margin-bottom: 0;
+  width: 100%;
+  margin: 0 0 -2px 50%;
   transform: translateX(-50%);
 }
 h2 {
@@ -215,33 +148,74 @@ h2 {
   text-align: center;
 }
 .incom {
-/*   background-image: url(images/incoming.jpeg); */
-/*   background-color: rgba(56, 87, 105, 1); */
-  background-color: rgba(0, 0, 0, 0.8);
   background-size: cover;
   background-position: center;
   padding: 10px 0 10px 0;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   color: white;
-  text-align: center;
   margin-bottom: 20px;
+  background: #33295e;
+  background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
+  background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
+  background: linear-gradient(135deg, #33295e 0%,#000000 100%,#050202 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33295e', endColorstr='#050202',GradientType=1 );
+}
+.search div {
+  width: 300px;
+  text-align: left;
+  margin-left: 30px;
 }
 .search {
-/*   background-image: url(images/starry.jpg); */
-  background-color: rgba(56, 87, 105, 1);
+  width: 100%;
+  margin: 0 auto;
   background-size: cover;
   background-position: center;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
   text-align: center;
+  background: #33295e;
+  background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
+  background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
+  background: linear-gradient(135deg, #33295e 0%,#000000 100%,#050202 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33295e', endColorstr='#050202',GradientType=1 );
+}
+
+.search .container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 81%;
+  margin: 0 auto;
 }
 .risk {
   width: 3.5%;
   height: 96%;
+}
+#meter_container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 50px;
+  background-color: black;
+}
+#meter_container2 h1 {
+  font-size: 25px;
+  text-align: center;
+}
+#meter_container2 {
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+  background-size: cover;
+  padding: 20px 0 20px 0;
+  background: -moz-linear-gradient(45deg, rgba(76,19,99,0.85) 0%, rgba(76,21,100,0.85) 1%, rgba(125,185,232,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%);
+  background: linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94c1363', endColorstr='#7db9e8',GradientType=1 );
 }
 button, input {
   width: 50%;
@@ -250,20 +224,18 @@ button, input {
   text-align: center;
   border-radius: 15px;
   margin-bottom: 15px;
+  font-family: 'Jura', sans-serif;
 }
 button {
   border-radius: 15px;
   background-color: #ccc;
   margin-top: 20px;
+  font-weight:bold;
 }
 input {
- -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
- -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
- box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-}
-#meter_container {
-  display: flex;
-  align-items: center;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
 #one {
   background-color: #32FC90;
@@ -363,21 +335,6 @@ input {
     height: 30px;
     width: 150px;
   }
-  #meter_container2 {
-    width: 25%;
-  }
-
-  .oftheday {
-    margin: 0;
-    width: 100%;
-  }
-  .search {
-    width: 100%;
-  }
-  .incom {
-    width: 100%;
-  }
-
   h1 {
     font-size: 20px;
   }
@@ -390,7 +347,6 @@ input {
     width: 320px;
     height: 50px;
   }
-
   nav {
     height: 70px;
     font-size: 20px;
@@ -415,33 +371,32 @@ input {
   .oftheday p {
     font-size: 20px;
   }
-.shake {
-  display:inline-block
-}
-.shake {
-	display:block;
-	position:relative;
-}
-
-@-webkit-keyframes spaceboots {
-	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
-	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
-	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
-	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
-	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
-	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
-	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
-	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
-	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
-	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
-	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
-}
-.shake:hover,
-.shake:focus {
-	-webkit-animation-name: spaceboots;
-	-webkit-animation-duration: 0.8s;
-	-webkit-transform-origin:50% 50%;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-}
+  .shake {
+    display:inline-block
+  }
+  .shake {
+    display:block;
+    position:relative;
+  }
+  @-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  .shake:hover,
+  .shake:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
 }

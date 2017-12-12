@@ -5,6 +5,7 @@
   "main": "asteroid-service.js",
   "dependencies": {
     "angularjs-datepicker": "^2.1.23",
+    "ng-slide-down": "^0.4.2",
     "ng-twitter": "^0.0.4"
   },
   "devDependencies": {

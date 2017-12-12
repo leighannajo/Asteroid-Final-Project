@@ -1,7 +1,7 @@
 (function(){
   var searchComponent = {
     template:`<div class="search">
-    <h3>Search Asteroids by Date!</h3>
+    <h3>Search Asteroids by Date</h3>
     <form>
     <datepicker id="datepicker" date-format="yyyy-MM-dd" ng-model="$ctrl.searchInput">
     <input ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">

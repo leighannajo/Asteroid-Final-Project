@@ -3,19 +3,17 @@
 
 body {
   font-family: 'Jura', sans-serif;
-  min-width: 300px;
+/*   background-image: url(images/starry.jpg); */
 }
+
+#welcome {
+  width: 100%;
+}
+
 p a {
   color: white;
   font-weight: normal;
   border-bottom: 1px solid white;
-}
-.incom_meter {
-  width: 19%;
-  display: inline-block;
-  height: 2px;
-  opacity: 0.7;
-  margin-left: -4px;
 }
 
 #green {
@@ -84,26 +82,33 @@ p a {
   width: 14%;
 }
 
-#meter_container2 h1 {
-  font-family: 'Cabin Sketch', cursive;
-}
 .twitter {
   display: none;
 }
 .oftheday {
-  width: 100%;
-  height: 70vh;
+  width: 90%;
+
   margin: 0 auto;
-  padding: 10px 0 10px 0;
-  background-image: url(images/oftheday.jpg);
+/*   background-image: url(images/oftheday.jpg); */
+/*   background-color: rgba(56, 87, 105, 1); */
   background-size: cover;
   background-position: center;
-  text-align: center;
+  
   color: white;
-  overflow: scroll;
+  padding: 5px 0 10px 0;
+  margin-bottom: 20px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#33295e+0,000000+100,050202+100 */
+background: #33295e; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #33295e 0%,#000000 100%,#050202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33295e', endColorstr='#050202',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 .oftheday p {
-  background-color: rgba(0,0,0, 0.5);
+   margin-left: 20px;
+  padding-left: 10px;
+  border-left: 5px solid white;
 }
 .search div {
   width: 100%;
@@ -124,23 +129,63 @@ p a {
 }
 #meter_container {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   height: 50px;
   background-color: black;
 }
 
+#meter_container2 h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
+#meter_container2 {
+  margin: 0 auto;
+  width: 90%;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+  background-size: cover;
+  padding: 20px 0 20px 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c1363+0,207cca+100,2989d8+100,7db9e8+100&0.85+1,1+100 */
+background: -moz-linear-gradient(45deg, rgba(76,19,99,0.85) 0%, rgba(76,21,100,0.85) 1%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(76,19,99,0.85) 0%,rgba(76,21,100,0.85) 1%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94c1363', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 nav {
+  color: white;
   width: 100%;
   height: 50px;
-  background-color: #85B2AA;
-  background-size: cover;
   display: flex;
   justify-content: flex-end;
   justify-content: space-around;
   align-items: center;
+  background: linear-gradient(268deg, #246655, #4e2466);
+  background-size:cover;
+
+-webkit-animation: AnimationName 29s ease infinite;
+-moz-animation: AnimationName 29s ease infinite;
+animation: AnimationName 29s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
 }
 a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bolder;
   transition: 0.5s ease;
@@ -149,57 +194,72 @@ a:hover {
   color: grey;
   transition: 0.5s ease;
 }
-h1 {
-  text-align: center;
+.oftheday h1 {
+  margin-left: 18px;
+  font-size: 25px;
+}
+.title {
+  color: white;
+  font-size: 20px;
+  height: 30vh;
+  background-image: url(images/earth.jpg);
+  background-size: cover;
+  display: inline-block;
+  width: 90%;
+  margin-left: 50%;
+  margin-bottom: 0;
+  transform: translateX(-50%);
 }
 h2 {
   font-size: 10px;
   text-align: center;
 }
 .incom {
-  background-image: url(images/incoming.jpeg);
+/*   background-image: url(images/incoming.jpeg); */
+/*   background-color: rgba(56, 87, 105, 1); */
+  background-color: rgba(0, 0, 0, 0.8);
   background-size: cover;
   background-position: center;
-  height: 70vh;
-  overflow: scroll;
   padding: 10px 0 10px 0;
+  width: 90%;
   margin: 0 auto;
-  width: 100%;
   color: white;
   text-align: center;
+  margin-bottom: 20px;
 }
 .search {
-  background-image: url(images/starry.jpg);
+/*   background-image: url(images/starry.jpg); */
+  background-color: rgba(56, 87, 105, 1);
   background-size: cover;
   background-position: center;
-  height: 70vh;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   text-align: center;
-  overflow: scroll;
 }
 .risk {
   width: 3.5%;
   height: 96%;
 }
 button, input {
-  width: 80%;
+  width: 50%;
   height: 30px;
   border: none;
   text-align: center;
   border-radius: 15px;
   margin-bottom: 15px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-  box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
 button {
   border-radius: 15px;
-  background-color: white;
+  background-color: #ccc;
   margin-top: 20px;
+}
+input {
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+ -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+ box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
 #meter_container {
   display: flex;
@@ -304,33 +364,18 @@ button {
     width: 150px;
   }
   #meter_container2 {
-    position: absolute;
-    right: 3px;;
-    top: 70px;
     width: 25%;
   }
-  .twitter {
-    display: inline-block;
-    width: 25%;
-    float: right;
-    height: 74vh;
-    margin-top: 150px;
-    overflow: scroll;
-  }
+
   .oftheday {
-    height: 100vh;
     margin: 0;
-    width: 75%;
+    width: 100%;
   }
   .search {
-    height: 100vh;
-    margin: 0;
-    width: 75%;
+    width: 100%;
   }
   .incom {
-    height: 100vh;
-    margin: 0;
-    width: 75%;
+    width: 100%;
   }
 
   h1 {
@@ -345,9 +390,7 @@ button {
     width: 320px;
     height: 50px;
   }
-  #meter_container2 {
-    top: 80px;
-  }
+
   nav {
     height: 70px;
     font-size: 20px;
@@ -372,11 +415,8 @@ button {
   .oftheday p {
     font-size: 20px;
   }
-  .twitter {
-    margin-top: 175px;
-  }
-  .shake {
-	display:inline-block
+.shake {
+  display:inline-block
 }
 .shake {
 	display:block;

@@ -2,6 +2,8 @@
   var homeComponent = {
     template: `
     <!-- <button>this does nothing</button> -->
+    <div id="welcome">
+    </div>
     <div class="oftheday">
     <h1>Asteroid of the Day</h1>
     <p ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}<br>{{data.potential}}<br>{{data.diameter}}<br> <a class="asteroidLink" href="{{data.url}}">More info!</a></p>

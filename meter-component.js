@@ -62,6 +62,7 @@
 
       MeterService.makeRequest().then(function(risk) {
         console.log(risk);
+        risk = 10;
         if (risk === 1) {
           vm.display1 = true;
         } else if (risk === 2) {

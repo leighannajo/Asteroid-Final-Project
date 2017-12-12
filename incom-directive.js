@@ -6,21 +6,15 @@
 
 
         $element.on("click", function() {
-          $scope.$apply(function() {
-            $element.css("height", "auto");
-
+          console.log(this);
+          this.classList.toggle("expanded");
           });
-        });
+        }
 
-        $element.on("mouseleave", function() {
-          $scope.$apply(function() {
-            $element.css("height", "50px");
-          });
-        });
 
       }
     };
-  }
+
   angular
   .module("app")
   .directive("incomDirective", incomDirective);

@@ -7,6 +7,11 @@ body {
 #welcome {
   width: 100%;
 }
+
+.expanded {
+  height: 200px !important;
+}
+
 p a {
   color: white;
   font-weight: normal;
@@ -81,7 +86,7 @@ nav {
   -webkit-animation: AnimationName 29s ease infinite;
   -moz-animation: AnimationName 29s ease infinite;
   animation: AnimationName 29s ease infinite;
-  
+
   @-webkit-keyframes AnimationName {
     0%{background-position:56% 0%}
     50%{background-position:45% 100%}
@@ -97,7 +102,7 @@ nav {
     50%{background-position:45% 100%}
     100%{background-position:56% 0%}
   }
-  
+
 }
 a {
   color: #ffffff;

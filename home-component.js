@@ -19,21 +19,21 @@
 
 
       vm.asteroidData = null;
-        vm.getRequest = function() {
-          AsteroidService.makeRequest();
-        };
-        vm.getRequest();
-        vm.getAsteroidData = function() {
-          vm.asteroidArray = AsteroidService.getData();
-        };
-        vm.getAsteroidData();
+      vm.getRequest = function() {
+        AsteroidService.makeRequest();
+      };
+      vm.getRequest();
+      vm.getAsteroidData = function() {
+        vm.asteroidArray = AsteroidService.getData();
+      };
+      vm.getAsteroidData();
 
-        vm.getFirstArray = function() {
-          vm.topAsteroidArray = AsteroidService.getArray();
-        };
-        vm.getFirstArray();
+      vm.getFirstArray = function() {
+        vm.topAsteroidArray = AsteroidService.getArray();
+      };
+      vm.getFirstArray();
 
-      }
+    }
   };
   angular
   .module("app")

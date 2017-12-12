@@ -5,9 +5,7 @@
     return {
       startIncom: startIncom,
       getData: getData
-
     };
-
     function startIncom() {
       return $http ({
         method: "GET",
@@ -20,7 +18,6 @@
       return asteroidData;
     }
   }
-
   angular
   .module("app")
   .factory("IncomService", IncomService);

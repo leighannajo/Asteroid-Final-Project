@@ -7,7 +7,7 @@
       getData: getData
 
     };
-
+    
     function searchName(text) {
       return $http ({
         method: "GET",

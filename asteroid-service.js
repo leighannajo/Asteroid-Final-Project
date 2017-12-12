@@ -50,7 +50,7 @@
 
         // console.log(asteroidData.data.near_earth_objects[randomNumber]);
         //display random asteroid data ^^^
-        
+
       });
     }
 

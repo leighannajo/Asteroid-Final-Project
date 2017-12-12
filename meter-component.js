@@ -62,7 +62,6 @@
 
       MeterService.makeRequest().then(function(risk) {
         console.log(risk);
-        risk = 10;
         if (risk === 1) {
           vm.display1 = true;
         } else if (risk === 2) {
@@ -129,8 +128,8 @@
           vm.display9 = true;
           vm.display10 = true;
         }
-    vm.meterDate = MeterService.getMeterData().close_approach_data["0"].close_approach_date;
-    vm.meterName = MeterService.getMeterData().name;
+        vm.meterDate = MeterService.getMeterData().close_approach_data["0"].close_approach_date;
+        vm.meterName = MeterService.getMeterData().name;
 
       });
 

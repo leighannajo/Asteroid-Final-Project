@@ -6,9 +6,11 @@
     </div>
     <div class="oftheday">
     <h1>Asteroid of the Day</h1>
-    <p ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}<br>{{data.potential}}<br>{{data.diameter}}<br> <a class="asteroidLink" href="{{data.url}}">More info!</a></p>
-    <p ng-repeat="info in $ctrl.asteroidArray track by $index">{{info.date}}<br>{{info.kph}}<br>{{info.missau}}<br>{{info.missm}}<br>{{info.misskm}}<br>{{info.orbits}}</p>
-    </div>
+    <h6 ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}
+    <br>{{data.potential}}<br>{{data.diameter}}<br> <a class="asteroidLink" href="{{data.url}}">More info!</a></h6>
+    <p home-directive ng-repeat="info in $ctrl.asteroidArray track by $index">{{info.date}}<br>{{info.kph}}
+    <br>{{info.missau}}<br>{{info.missm}}<br>{{info.misskm}}<br>{{info.orbits}}</p>
+  </div>
     `,
     controller:
 

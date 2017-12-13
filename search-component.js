@@ -4,8 +4,8 @@
     <h3>Search Asteroids by Date</h3>
     <form>
     <datepicker id="datepicker" date-format="yyyy-MM-dd" ng-model="$ctrl.searchInput">
-    <input ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">
-    <button ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
+    <input search-directive ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">
+    <button id="button" ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     </datepicker>
     </form>
     <div class="container"><div incom-directive class="asteroid"

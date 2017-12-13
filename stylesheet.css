@@ -25,7 +25,7 @@ p a {
   padding-top: 10px;
   padding-left: 2px;
   height: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0);
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -50,7 +50,7 @@ datepicker,
   background: #222;
   color: #333;
   z-index: 999;
-
+  display: none;
   margin: 0 auto;
   width: 300px;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
@@ -520,19 +520,6 @@ input {
   .shake {
     display:inline-block
   }
-  #datepicker {
-  width:500px;
-}
-datepicker,
-._720kb-datepicker-calendar-header,
-._720kb-datepicker-calendar-body,
-._720kb-datepicker-calendar-days-header,
-._720kb-datepicker-calendar-years-pagination-pages {
-  width: 500px;
-}
-._720kb-datepicker-calendar-days-header{
-  min-width: 500px;
-}
   .shake {
     display:block;
     position:relative;

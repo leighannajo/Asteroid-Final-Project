@@ -255,7 +255,11 @@ a:hover {
   width: 450px;
 }
 
-
+.bottom {
+  background-color: purple;
+  font-size: 25px;
+  height: 50px;
+}
 
 .oftheday p:hover {
   background-color: rgba(50,50,50, 0.5);
@@ -282,7 +286,7 @@ a:hover {
   background-position: center;
   color: white;
   padding: 5px 0 10px 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   background: #33295e;
   background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
   background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
@@ -314,7 +318,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   color: white;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   background: #33295e;
   background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
   background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
@@ -346,6 +350,36 @@ h2 {
 .risk {
   width: 3.5%;
   height: 96%;
+}
+.bottom {
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(268deg, #246655, #4e2466);
+  background-size:cover;
+  -webkit-animation: AnimationName 29s ease infinite;
+  -moz-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+  }
 }
 #meter_container {
   display: flex;

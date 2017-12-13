@@ -28,22 +28,26 @@
       }).then(function(response) {
         asteroidData = response;
         currentAsteroid = asteroidData.data.near_earth_objects[today][0];
+        var closeApproach = currentAsteroid.close_approach_data[0];
+        var closeVelocitySeconds = closeApproach.relative_velocity.kilometers_per_second;
+        var diameterMax = currentAsteroid.estimated_diameter.meters.estimated_diameter_max;
+        var diameterMin = currentAsteroid.estimated_diameter.meters.estimated_diameter_min;
         risk = 0;
-        if (currentAsteroid.close_approach_data[0].miss_distance.kilometers < 7479893) {
+        if (closeApproach.miss_distance.kilometers < 7479893) {
           risk = risk + 1;
         }
-        if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second === 10) {
+        if ( === 10) {
           risk = risk + 1;
-        } else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 10 && currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second < 15) {
+        } else if (closeVelocitySeconds > 10 && closeVelocitySeconds < 15) {
           risk = risk + 1;
-        }  else if (currentAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second > 20) {
+        }  else if (closeVelocitySeconds > 20) {
           risk = risk + 2;
         }
-        if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) < 25) {
+        if ((( diameterMax + diameterMin)/2) < 25) {
           risk = 0;
-        } else if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) > 25 && ((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) < 1000) {
+        } else if (((diameterMax + diameterMin)/2) > 25 && ((diameterMax + diameterMin)/2) < 1000) {
           risk = risk + 1;
-        } else if (((currentAsteroid.estimated_diameter.meters.estimated_diameter_max + currentAsteroid.estimated_diameter.meters.estimated_diameter_min)/2) > 5000) {
+        } else if (((diameterMax + diameterMin)/2) > 5000) {
           risk = risk + 2;
         }
         if (currentAsteroid.is_potentially_hazardous_asteroid === true) {

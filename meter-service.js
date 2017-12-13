@@ -36,7 +36,7 @@
         if (closeApproach.miss_distance.kilometers < 7479893) {
           risk = risk + 1;
         }
-        if ( === 10) {
+        if (closeVelocitySeconds === 10) {
           risk = risk + 1;
         } else if (closeVelocitySeconds > 10 && closeVelocitySeconds < 15) {
           risk = risk + 1;

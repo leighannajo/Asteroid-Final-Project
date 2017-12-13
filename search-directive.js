@@ -3,20 +3,10 @@
     return {
       restrict: "A",
       link: function($scope, $element, $attrs) {
-         var result = document.getElementsByTagName("input");
-         var wrappedResult = angular.element(result);
-         wrappedResult.on("click", function() {
-          var result2 = document.getElementsByClassName("_720kb-datepicker-calendar");
-          var wrappedResult2 = angular.element(result2);
-          wrappedResult2.css("display", "inline-block");
-          });
-          var result3 = document.getElementById("button");
-          var wrappedResult3 = angular.element(result3);
-          wrappedResult3.on("click", function() {
-            var result2 = document.getElementsByClassName("_720kb-datepicker-calendar");
-            var wrappedResult2 = angular.element(result2);
-            wrappedResult2.css("display", "none");
-          })
+         $element.on('click', function(){
+           var result2 = document.getElementsByClassName("_720kb-datepicker-calendar")[0];
+           result2.classList.toggle("showing");
+         })
         }
       }
     };

@@ -30,6 +30,14 @@ p a {
   transform: translateX(-50%);
 }
 
+.showing {
+  height: 300px !important;
+  max-height: 300px !important;
+  overflow: visible !important;
+  visibility: visible !important;
+  transition: 1s ease;
+}
+
 datepicker,
 ._720kb-datepicker-calendar-header,
 ._720kb-datepicker-calendar-body,
@@ -47,10 +55,15 @@ datepicker,
   clear: right;
 }
 ._720kb-datepicker-calendar {
+  height: 0px;
+  max-height: 0px;
+  transition: 1s ease;
+  overflow: hidden;
+  visibility: hidden;
+
   background: #222;
   color: #333;
   z-index: 999;
-  display: none;
   margin: 0 auto;
   width: 300px;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;

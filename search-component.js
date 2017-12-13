@@ -24,7 +24,7 @@
 
       vm.getSearchData = function(text) {
         console.log(vm.searchInput);
-        SearchService.searchName(text)
+        SearchService.searchName((new Date(Date.parse(text))).toISOString().slice(0,10))
         .then(function(){
           vm.searchResults = SearchService.getData();
           vm.displayArray = [];

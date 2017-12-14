@@ -29,21 +29,21 @@
         var randomCloseApproach = randomAsteroid.close_approach_data;
 
         topAsteroidObj = {
-          name: "Name: " + randomAsteroid.name,
-          potential: "Potentially Hazardous? " + randomAsteroid.is_potentially_hazardous_asteroid,
-          diameter: "Diameter: " + (((diameterMin)+(diameterMax))/2),
+          name: randomAsteroid.name,
+          potential: randomAsteroid.is_potentially_hazardous_asteroid,
+          diameter: (((diameterMin)+(diameterMax))/2),
           url:  randomAsteroid.nasa_jpl_url,
         }
         topAsteroidArray.push(topAsteroidObj);
         for(var i=0; i< randomCloseApproach.length; i++) {
           asteroidObj = {
 
-            date: "Close approach date: " + randomCloseApproach[i].close_approach_date,
-            kph: "Relative Velocity: " + randomCloseApproach[i].relative_velocity.kilometers_per_hour + "kph",
-            mph: "Relative Velocity: " + randomCloseApproach[i].relative_velocity.miles_per_hour + "mph",            missau: "Miss distance: " + randomCloseApproach[i].miss_distance.astronomical + "AU",
-            missm: "Miss distance: " + randomCloseApproach[i].miss_distance.miles + " miles",
-            misskm: "Miss distance: " + randomCloseApproach[i].miss_distance.kilometers + " kilometers",
-            orbits: "Orbiting Body: " + randomCloseApproach[i].orbiting_body
+            date: randomCloseApproach[i].close_approach_date,
+            kph: randomCloseApproach[i].relative_velocity.kilometers_per_hour + " kph",
+            mph: randomCloseApproach[i].relative_velocity.miles_per_hour + " mph",            missau: randomCloseApproach[i].miss_distance.astronomical + " AU",
+            missm: randomCloseApproach[i].miss_distance.miles + " miles",
+            misskm: randomCloseApproach[i].miss_distance.kilometers + " kilometers",
+            orbits: randomCloseApproach[i].orbiting_body
           }
           asteroidArray.push(asteroidObj);
         }

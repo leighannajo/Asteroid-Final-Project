@@ -10,8 +10,8 @@
     </datepicker>
     </form>
     <div class="container"><div incom-directive class="asteroid"
-    ng-repeat="objects in $ctrl.displayArray track by $index">{{objects.name}}<br>{{objects.date}}
-    <br>{{objects.distance}}<br>{{objects.speed}}<br>{{objects.orbits}}</div></div>
+    ng-repeat="objects in $ctrl.displayArray track by $index"><span>Name: </span>{{objects.name}}<br><span>Date: </span>{{objects.date}}
+    <br><span>Distance: </span>{{objects.distance}}<br><span>Speed: </span>{{objects.speed}}<br><span>Orbiting Body: </span>{{objects.orbits}}</div></div>
     </div>
     `,
     controller:
@@ -32,11 +32,11 @@
 
           vm.searchResults.forEach(function(item) {
             vm.asteroidObj = {
-              name : "Name: " + item[0],
-              date: "Date: " + item[3],
-              distance: "Distance: " + Number(item[4]).toFixed(10) + " AU",
-              speed: "Speed: " + Number(item[5]).toFixed(3) + " km/s",
-              orbits: "Orbiting Body: " + item[10]
+              name: item[0],
+              date: item[3],
+              distance: Number(item[4]).toFixed(10) + " AU",
+              speed: Number(item[5]).toFixed(3) + " km/s",
+              orbits: item[10]
             }
             vm.displayArray.push(vm.asteroidObj);
           })

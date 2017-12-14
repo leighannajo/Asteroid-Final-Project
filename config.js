@@ -18,7 +18,9 @@
       `
     }).when("/incoming", {
       template: `
-      <h1 class="title">View incoming asteroids for the next 7 days</h1>
+      <div class="title">
+      <h1 class="typewriter">Incoming Asteroids</h1>
+      </div>
       <meter-component></meter-component>
       <incom-component></incom-compnent>
 

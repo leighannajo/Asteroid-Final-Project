@@ -1,7 +1,6 @@
 (function(){
   var incomComponent = {
     template:`
-
     <div class="incom">
     <h3>Incoming Asteroids</h3>
     <div class="container">

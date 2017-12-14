@@ -6,7 +6,6 @@
         </div>
         <div class="oftheday">
         <button class="randomizer" type="button" ng-click="$ctrl.getRequest();$ctrl.getAsteroidData();$ctrl.getFirstArray();">ASTEROID RANDOMIZER</button>
-
         <h1>Your Random Asteroid:</h1>
         <p>Click on Close Approach Data for more info.</p>
         <h6 ng-repeat="data in $ctrl.topAsteroidArray track by $index"><span>Name: </span>{{data.name}}

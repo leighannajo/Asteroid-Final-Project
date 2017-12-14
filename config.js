@@ -9,6 +9,9 @@
       <div id="welcome">
       <h1 class="typewriter">Welcome</h1>
       </div>
+      <div id="textcontainer">
+      <p id="text" class="typewriter2">Is the end near? Check out our armageddon meter to view Earth's current risk status.</p>
+      </div>
       </div>
       <meter-component></meter-component>
       <home-component></home-component>

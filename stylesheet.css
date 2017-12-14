@@ -11,6 +11,7 @@ body {
 #welcome {
   width: 100%;
 }
+
 .expanded {
   height: 200px !important;
 }
@@ -293,6 +294,7 @@ a:hover {
   z-index: 1;
   width: 100%;
   margin: 0 auto;
+  margin-top: -20px;
   background-size: cover;
   background-position: center;
   color: white;
@@ -432,8 +434,26 @@ input {
   -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
+#text {
+  font-size: 10px;
+  margin-top: 5px;
+}
+#textcontainer {
+  margin: 0 auto;
+  width: 100%;
+}
+.typewriter2 {
+  text-align: center;
+  border-right: .07em solid purple; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .20em; /* Adjust as needed */
+  animation:
+  typing 1s steps(20, end),
+  blink-caret .75s step-end infinite;
+}
 .typewriter {
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .07em solid purple; /* The typwriter cursor */
@@ -441,8 +461,8 @@ input {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .20em; /* Adjust as needed */
   animation:
-    typing 0.5s steps(6, end),
-    blink-caret .75s step-end infinite;
+  typing 0.5s steps(6, end),
+  blink-caret .75s step-end infinite;
 }
 /* The typing effect */
 @keyframes typing {
@@ -455,7 +475,7 @@ input {
   50% { border-color: green; }
 }
 #welcome {
-  width: 300px;
+  width: 200px;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -717,7 +737,7 @@ input {
 
 .randomizer {
  margin-left: 50%;
-  width: 50%;
+  width: 70%;
   transform: translateX(-50%);
 }
 

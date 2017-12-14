@@ -30,6 +30,14 @@ p a {
   transform: translateX(-50%);
 }
 
+.showing {
+  height: 300px !important;
+  max-height: 300px !important;
+  overflow: visible !important;
+  visibility: visible !important;
+  transition: 1s ease;
+}
+
 datepicker,
 ._720kb-datepicker-calendar-header,
 ._720kb-datepicker-calendar-body,
@@ -47,10 +55,15 @@ datepicker,
   clear: right;
 }
 ._720kb-datepicker-calendar {
+  height: 0px;
+  max-height: 0px;
+  transition: 1s ease;
+  overflow: hidden;
+  visibility: hidden;
+
   background: #222;
   color: #333;
   z-index: 999;
-  display: none;
   margin: 0 auto;
   width: 300px;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
@@ -303,9 +316,7 @@ h2 {
   font-size: 10px;
   text-align: center;
 }
-button {
-  display: flex;
-}
+
 .incom .container {
   display: flex;
   flex-wrap: wrap;
@@ -417,6 +428,44 @@ input {
   -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
+.typewriter {
+  font-size: 50px;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .07em solid purple; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .20em; /* Adjust as needed */
+  animation:
+    typing 0.5s steps(6, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0% }
+  to { width: 100% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: green; }
+}
+#welcome {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
 .one {
   background-color: rgba(50, 252, 144, 0.2);
   margin-left: 1px;

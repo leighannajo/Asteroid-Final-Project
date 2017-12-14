@@ -2,16 +2,18 @@
   var homeComponent = {
     template: `
     <!-- <button>this does nothing</button> -->
-    <div id="welcome">
-    </div>
-        <button id="random" type="button" ng-click="$ctrl.getRequest();$ctrl.getAsteroidData();$ctrl.getFirstArray();">ASTEROID RANDOMIZER</button>
-    <div class="oftheday">
-    <h1>Asteroid of the Right Now...</h1>
-    <h6 ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}
-    <br>{{data.potential}}<br>{{data.diameter}}<br> <a class="asteroidLink" href="{{data.url}}">More info!</a></h6>
-    <p home-directive ng-repeat="info in $ctrl.asteroidArray track by $index">{{info.date}}<br>{{info.kph}}
-    <br>{{info.missau}}<br>{{info.missm}}<br>{{info.misskm}}<br>{{info.orbits}}</p>
-  </div>
+        <div id="welcome">
+        </div>
+        <div class="oftheday">
+        <button class="randomizer" type="button" ng-click="$ctrl.getRequest();$ctrl.getAsteroidData();$ctrl.getFirstArray();">ASTEROID RANDOMIZER</button>
+
+        <h1>Asteroid of the Right Now...</h1>
+        <h6 ng-repeat="data in $ctrl.topAsteroidArray track by $index">{{data.name}}
+        <br>{{data.potential}}<br>{{data.diameter}}<br> <a class="asteroidLink" href="{{data.url}}">More info!</a></h6>
+        <p home-directive ng-repeat="info in $ctrl.asteroidArray track by $index">{{info.date}}<br>{{info.kph}}
+        <br>{{info.missau}}<br>{{info.missm}}<br>{{info.misskm}}<br>{{info.orbits}}</p>
+      </div>
+
 
     `,
     controller:

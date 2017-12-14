@@ -5,7 +5,11 @@
     $routeProvider
     .when("/home", {
       template: `
-      <h1 class="title">Welcome</h1>
+      <div class="title">
+      <div id="welcome">
+      <h1 class="typewriter">Welcome</h1>
+      </div>
+      </div>
       <meter-component></meter-component>
       <home-component></home-component>
       `

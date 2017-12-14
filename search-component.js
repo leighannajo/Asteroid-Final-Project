@@ -5,7 +5,8 @@
     <form>
     <datepicker id="datepicker" date-format="yyyy-MM-dd" ng-model="$ctrl.searchInput">
     <input search-directive ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">
-    <button id="button" ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
+    <p search-directive>Show/hide calendar</p>
+    <button search-directive ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     </datepicker>
     </form>
     <div class="container"><div incom-directive class="asteroid"

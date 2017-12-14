@@ -394,13 +394,22 @@ h2 {
     100%{background-position:56% 0%}
   }
 }
+#background-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: black;
+}
 #meter_container {
   display: flex;
   align-items: center;
   margin: 0 auto;
   width: 80%;
   height: 50px;
-  background-color: black;
+  background: -moz-linear-gradient(45deg, rgba(50,252,121,0.52) 0%, rgba(252,218,50,0.52) 37%, rgba(249,49,83,0.53) 70%, rgba(252,50,205,0.53) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(50,252,121,0.52) 0%,rgba(252,218,50,0.52) 37%,rgba(249,49,83,0.53) 70%,rgba(252,50,205,0.53) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(50,252,121,0.52) 0%,rgba(252,218,50,0.52) 37%,rgba(249,49,83,0.53) 70%,rgba(252,50,205,0.53) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8532fc79', endColorstr='#87fc32cd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 #meter_container2 h1 {
   font-size: 25px;
@@ -442,6 +451,55 @@ input {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+}
+.typewriter {
+  font-size: 50px;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .07em solid purple; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .20em; /* Adjust as needed */
+  animation:
+    typing 1s steps(6, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 50% }
+  to { width: 55% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: green; }
+}
+#welcome {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 #one {
   background-color: #32FC90;

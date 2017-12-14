@@ -5,6 +5,7 @@
     <div id="meter_container2">
     <h1 class="shake">ARMAGEDDON METER</h1>
     <h2>{{$ctrl.meterName}}<br>{{$ctrl.meterDate}}</h2>
+    <div id="background-container">
     <div id="meter_container">
     <div ng-if="$ctrl.display1" id="one" class="risk"></div>
     <div ng-if="$ctrl.display1" id="one1" class="risk"></div>
@@ -36,6 +37,7 @@
     <div ng-if="$ctrl.display10" id="ten" class="risk"></div>
     <div ng-if="$ctrl.display10" id="ten1" class="risk"></div>
     <div ng-if="$ctrl.display10" id="ten2" class="risk"></div>
+    </div>
     </div>
     </div>
     `,

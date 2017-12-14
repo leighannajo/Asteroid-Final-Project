@@ -30,14 +30,6 @@ p a {
   transform: translateX(-50%);
 }
 
-.showing {
-  height: 300px !important;
-  max-height: 300px !important;
-  overflow: visible !important;
-  visibility: visible !important;
-  transition: 1s ease;
-}
-
 datepicker,
 ._720kb-datepicker-calendar-header,
 ._720kb-datepicker-calendar-body,
@@ -55,15 +47,10 @@ datepicker,
   clear: right;
 }
 ._720kb-datepicker-calendar {
-  height: 0px;
-  max-height: 0px;
-  transition: 1s ease;
-  overflow: hidden;
-  visibility: hidden;
-
   background: #222;
   color: #333;
   z-index: 999;
+  display: none;
   margin: 0 auto;
   width: 300px;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
@@ -264,21 +251,7 @@ a:hover {
   border-left: 5px solid white;
   height: 25px;
   overflow: hidden;
-  transition: 0.5s ease;
-  width: 450px;
 }
-
-.bottom {
-  background-color: purple;
-  font-size: 25px;
-  height: 50px;
-}
-
-.oftheday p:hover {
-  background-color: rgba(50,50,50, 0.5);
-  transition: 0.5s ease;
-}
-
  h6 {
   margin-left: 20px;
   padding-left: 10px;
@@ -299,7 +272,7 @@ a:hover {
   background-position: center;
   color: white;
   padding: 5px 0 10px 0;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   background: #33295e;
   background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
   background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
@@ -320,6 +293,9 @@ h2 {
   font-size: 10px;
   text-align: center;
 }
+button {
+  display: flex;
+}
 .incom .container {
   display: flex;
   flex-wrap: wrap;
@@ -331,7 +307,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   color: white;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   background: #33295e;
   background: -moz-linear-gradient(-45deg, #33295e 0%, #000000 100%, #050202 100%);
   background: -webkit-linear-gradient(-45deg, #33295e 0%,#000000 100%,#050202 100%);
@@ -364,52 +340,31 @@ h2 {
   width: 3.5%;
   height: 96%;
 }
-.bottom {
-  color: white;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: flex-end;
-  justify-content: space-around;
-  align-items: center;
-  background: linear-gradient(268deg, #246655, #4e2466);
-  background-size:cover;
-  -webkit-animation: AnimationName 29s ease infinite;
-  -moz-animation: AnimationName 29s ease infinite;
-  animation: AnimationName 29s ease infinite;
 
-  @-webkit-keyframes AnimationName {
-    0%{background-position:56% 0%}
-    50%{background-position:45% 100%}
-    100%{background-position:56% 0%}
-  }
-  @-moz-keyframes AnimationName {
-    0%{background-position:56% 0%}
-    50%{background-position:45% 100%}
-    100%{background-position:56% 0%}
-  }
-  @keyframes AnimationName {
-    0%{background-position:56% 0%}
-    50%{background-position:45% 100%}
-    100%{background-position:56% 0%}
-  }
-}
-#background-container {
-  height: 50px;
+.meter-wrap {
+  position: absolute;
   width: 100%;
+}
+#meter_container_trans {
   display: flex;
-  background-color: black;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  width: 70%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #meter_container {
   display: flex;
   align-items: center;
+  position: absolute;
   margin: 0 auto;
-  width: 80%;
+  width: 44%;
+  justify-content: center;
+  /* margin-left: -95px; */
   height: 50px;
-  background: -moz-linear-gradient(45deg, rgba(50,252,121,0.52) 0%, rgba(252,218,50,0.52) 37%, rgba(249,49,83,0.53) 70%, rgba(252,50,205,0.53) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, rgba(50,252,121,0.52) 0%,rgba(252,218,50,0.52) 37%,rgba(249,49,83,0.53) 70%,rgba(252,50,205,0.53) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, rgba(50,252,121,0.52) 0%,rgba(252,218,50,0.52) 37%,rgba(249,49,83,0.53) 70%,rgba(252,50,205,0.53) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8532fc79', endColorstr='#87fc32cd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  z-index: 0;
+  /* background-color: black; */
 }
 #meter_container2 h1 {
   font-size: 25px;
@@ -452,54 +407,157 @@ input {
   -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
-.typewriter {
-  font-size: 50px;
-  text-align: center;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .07em solid purple; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .20em; /* Adjust as needed */
-  animation:
-    typing 1s steps(6, end),
-    blink-caret .75s step-end infinite;
+.one {
+  background-color: rgba(50, 252, 144, 0.2);
+  margin-left: 1px;
+  width: 3.5%;
+  height: 96%;
 }
-/* The typing effect */
-@keyframes typing {
-  from { width: 50% }
-  to { width: 55% }
+.one1 {
+  background-color: rgba(50, 252, 121, 0.2);
+  width: 3.5%;
+  height: 96%;
 }
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: green; }
+.one2 {
+  background-color: rgba(50, 252, 107, 0.2);
+  width: 3.5%;
+  height: 96%;
 }
-#welcome {
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 20px;
+.two {
+  background-color: rgba(50, 252, 84, 0.2);
+  width: 3.5%;
+  height: 96%;
 }
-.typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.two1 {
+  background-color: rgba(50, 252, 70, 0.2);
+  width: 3.5%;
+  height: 96%;
 }
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.two2 {
+  background-color: rgba(74, 252, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
 }
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+.three {
+  background-color: rgba(117, 252, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.three1 {
+  background-color: rgba(130, 251, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.three2 {
+  background-color: rgba(154, 252, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.four {
+  background-color: rgba(178, 252, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.four1 {
+  background-color: rgba(205, 252, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.four2 {
+  background-color: rgba(224, 251, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.five {
+  background-color: rgba(239, 249, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.five1 {
+  background-color: rgba(249, 236, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.five2 {
+  background-color: rgba(252, 218, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.six {
+  background-color: rgba(252, 195, 50, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.six1 {
+  background-color: rgba(247, 98, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.six2 {
+  background-color: rgba(247, 79, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.seven {
+  background-color: rgba(247, 75, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.seven1 {
+  background-color: rgba(244, 65, 48, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.seven2 {
+  background-color: rgba(247, 65, 49, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.eight {
+  background-color: rgba(244, 48, 48, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.eight1 {
+  background-color: rgba(247, 49, 72, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.eight2 {
+  background-color: rgba(249, 49, 83, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.nine {
+  background-color: rgba(249, 49, 103, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.nine1 {
+  background-color: rgba(249, 49, 116, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.nine2 {
+  background-color: rgba(252, 50, 134, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.ten {
+  background-color: rgba(251, 49, 157, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.ten1 {
+  background-color: rgba(252, 50, 191, 0.2);
+  width: 3.5%;
+  height: 96%;
+}
+.ten2 {
+  background-color: rgba(252, 50, 205, 0.2);
+  margin-right: 1px;
+  width: 3.5%;
+  height: 96%;
 }
 #one {
   background-color: #32FC90;

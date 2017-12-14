@@ -34,7 +34,7 @@
             vm.asteroidObj = {
               name: item[0],
               date: item[3],
-              distance: Number(item[4]).toFixed(10) + " AU",
+              distance: Number(item[4]).toFixed(7) + " AU",
               speed: Number(item[5]).toFixed(3) + " km/s",
               orbits: item[10]
             }

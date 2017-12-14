@@ -11,17 +11,14 @@
     </div>
     `,
     controller:
-
     function(IncomService) {
       var vm = this;
       vm.incomData;
       vm.displayArray = [];
       vm.asteroidObj;
       vm.isActive = false;
-
       IncomService.startIncom().then(function(){
         vm.incomData = IncomService.getData();
-
         vm.incomData.forEach(function(item) {
           vm.asteroidObj = {
             name : item[0],
@@ -36,8 +33,6 @@
         })
       })
     }
-
-
   };
   angular
   .module("app")

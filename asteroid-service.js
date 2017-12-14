@@ -47,19 +47,14 @@
           }
           asteroidArray.push(asteroidObj);
         }
-
-  
-
       });
     }
-
     function getData() {
       return asteroidArray;
     }
     function getArray() {
       return topAsteroidArray;
     }
-
   }
   angular
   .module("app")

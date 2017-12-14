@@ -17,13 +17,10 @@
     </div>
     `,
     controller:
-
-    function(AsteroidService) {
+        function(AsteroidService) {
       var vm = this;
       vm.asteroidArray;
       vm.topAsteroidArray;
-
-
       vm.asteroidData = null;
       vm.getRequest = function() {
         AsteroidService.makeRequest();
@@ -38,7 +35,6 @@
         vm.topAsteroidArray = AsteroidService.getArray();
       };
       vm.getFirstArray();
-
     }
   };
   angular

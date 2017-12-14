@@ -7,19 +7,15 @@
     var mm = today.getMonth()+1;
     var yyyy = today.getFullYear();
     var risk = 0;
-
     if (dd<10) {
       dd = dd.toString();
       dd = "0" + dd;
     }
-
     today = (yyyy + "-" + mm + "-" + dd).toString();
     console.log(today);
-
     return {
       makeRequest: makeRequest,
       getMeterData: getMeterData
-
     };
     function makeRequest() {
       return $http({
@@ -55,13 +51,10 @@
         }
         return risk;
       });
-
     }
     function getMeterData() {
-    //  console.log(currentAsteroid);
       return currentAsteroid;
     }
-
   }
   angular
   .module("app")

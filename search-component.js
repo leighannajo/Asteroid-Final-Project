@@ -4,7 +4,7 @@
     <h3>Search Asteroids by Date</h3>
     <form>
     <datepicker id="datepicker" date-format="yyyy-MM-dd" ng-model="$ctrl.searchInput">
-    <input search-directive ng-model="$ctrl.searchInput" type="text" placeholder="yyyy-mm-dd">
+    <input search-directive ng-model="$ctrl.searchInput" type="text" placeholder="mm/dd/yyyy">
     <p search-directive>Show/hide calendar</p>
     <button search-directive ng-click="$ctrl.getSearchData($ctrl.searchInput);">Search</button>
     </datepicker>
@@ -15,21 +15,18 @@
     </div>
     `,
     controller:
-
     function(SearchService) {
       var vm = this;
       vm.searchInput;
       vm.searchResults;
       vm.displayArray = [];
       vm.asteroidObj;
-
       vm.getSearchData = function(text) {
         console.log(vm.searchInput);
         SearchService.searchName((new Date(Date.parse(text))).toISOString().slice(0,10))
         .then(function(){
           vm.searchResults = SearchService.getData();
           vm.displayArray = [];
-
           vm.searchResults.forEach(function(item) {
             vm.asteroidObj = {
               name: item[0],
@@ -43,8 +40,6 @@
         })
       }
     }
-
-
   };
   angular
   .module("app")

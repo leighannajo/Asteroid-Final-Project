@@ -5,9 +5,7 @@
     return {
       searchName: searchName,
       getData: getData
-
     };
-    
     function searchName(text) {
       return $http ({
         method: "GET",
@@ -20,8 +18,7 @@
       return asteroidData;
     }
   }
-
-  angular
+    angular
   .module("app")
   .factory("SearchService", SearchService);
 })();

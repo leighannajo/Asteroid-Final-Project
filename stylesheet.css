@@ -64,6 +64,7 @@ datepicker,
   clear: right;
 }
 ._720kb-datepicker-calendar {
+  display: none;
   height: 0px;
   max-height: 0px;
   transition: 1s ease;
@@ -812,6 +813,9 @@ input {
   }
 }
 @media only screen and (min-width: 1200px){
+  ._720kb-datepicker-calendar {
+  display: block;
+    }
 
   .bottom {
     flex-direction: row;

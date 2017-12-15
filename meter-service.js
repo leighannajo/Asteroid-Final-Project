@@ -22,7 +22,6 @@
         method: "GET",
         url: "https://api.nasa.gov/neo/rest/v1/feed?start_date=2017-12-15&api_key=WJqgdCXy65yXJVQE6Se8wR4TmyDe6SqNONYiN4ef"
       }).then(function(response) {
-        console.log(response);
         asteroidData = response;
         currentAsteroid = asteroidData.data.near_earth_objects[today][0];
         var closeApproach = currentAsteroid.close_approach_data[0];

@@ -775,9 +775,7 @@ input {
   }
 }
 @media only screen and (min-width: 700px){
-  .search p {
-  display: block;
-}
+
   
   .bottom a {
     font-size: 20px;
@@ -821,6 +819,11 @@ input {
   }
 }
 @media only screen and (min-width: 1200px){
+    .search p {
+  display: block;
+}
+  
+  
   ._720kb-datepicker-calendar {
   display: block;
     }

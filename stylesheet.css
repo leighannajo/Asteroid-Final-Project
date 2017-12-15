@@ -31,6 +31,10 @@ span {
   color: hsl(172, 100%, 60%);
 }
 
+.search p {
+  display: none;
+}
+
 #datepicker {
   width:300px;
   padding-top: 10px;
@@ -771,6 +775,10 @@ input {
   }
 }
 @media only screen and (min-width: 700px){
+  .search p {
+  display: block;
+}
+  
   .bottom a {
     font-size: 20px;
   }

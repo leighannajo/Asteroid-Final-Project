@@ -31,10 +31,6 @@ span {
   color: hsl(172, 100%, 60%);
 }
 
-.search p {
-  display: none;
-}
-
 #datepicker {
   width:300px;
   padding-top: 10px;
@@ -68,7 +64,6 @@ datepicker,
   clear: right;
 }
 ._720kb-datepicker-calendar {
-  display: none;
   height: 0px;
   max-height: 0px;
   transition: 1s ease;
@@ -394,10 +389,9 @@ h2 {
   display: flex;
   align-items: center;
   position: absolute;
-  margin: 0 auto;
-  width: 44%;
-  justify-content: center;
-  /* margin-left: -95px; */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
   height: 50px;
   z-index: 0;
   /* background-color: black; */
@@ -775,8 +769,6 @@ input {
   }
 }
 @media only screen and (min-width: 700px){
-
-  
   .bottom a {
     font-size: 20px;
   }
@@ -815,18 +807,10 @@ input {
     flex-direction: row;
   }
   .randomizer {
-    width: 300px;
+    width: 200px;
   }
 }
 @media only screen and (min-width: 1200px){
-    .search p {
-  display: block;
-}
-  
-  
-  ._720kb-datepicker-calendar {
-  display: block;
-    }
 
   .bottom {
     flex-direction: row;
